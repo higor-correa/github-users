@@ -6,7 +6,7 @@ dotenv.config();
 const githubUsersRoutes = require('./src/api/routes/githubUsersRoutes');
 const bodyParser = require('body-parser');
 var app = express();
-var port = process.env.PORT || 8065;
+var port = process.env.PORT || 80;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
