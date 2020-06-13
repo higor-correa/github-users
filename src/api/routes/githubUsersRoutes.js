@@ -1,12 +1,12 @@
 const githubUsers = require('../controllers/githubUserController');
 
 module.exports = function (app) {
-    app.route('/users')
+    app.route('/api/users')
         .get(githubUsers.listUsers);
 
-    app.route('/users/:userName/details')
+    app.route('/api/users/:userName/details')
         .get(githubUsers.getUserDetails);
 
-    app.route('/users/:userName/repos')
+    app.route('/api/users/:userName/repos')
         .get(githubUsers.getUserRepositories);
 };
